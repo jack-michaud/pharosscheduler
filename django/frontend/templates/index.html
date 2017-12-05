@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+</head>
+
+<body>
+    <h1>Pharos Scheduler</h1>
+
+
+    <form action="/submit" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <label for="username">Username</label>
+            <input placeholder="MyNEU Username" id="username" type="text" />
+            <label for="pickup_time">Pickup Time</label>
+            <input type="time" id="pickup_time" name="pickup_time"/>
+            <input type="date" id="pickup_date" name="pickup_date"/>
+            <br/>
+            <input type="file" name="file" />
+            <input class="button-primary" value="Send" type="submit">
+        </fieldset>
+    </form>
+</body>
